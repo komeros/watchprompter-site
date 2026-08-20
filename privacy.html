@@ -1,89 +1,566 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WatchPrompter Privacy Policy</title>
-<style>
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;max-width:860px;margin:auto;padding:32px 20px;line-height:1.65}
-h1,h2{line-height:1.25} hr{margin:48px 0} a{color:#0a66c2}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WatchPrompter Privacy Policy</title>
+
+  <meta
+    id="meta-description"
+    name="description"
+    content="Privacy Policy for WatchPrompter"
+  >
+
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      background: Canvas;
+      color: CanvasText;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 72px;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      margin-top: 32px;
+      font-size: 1.25rem;
+    }
+
+    a {
+      color: #0a66c2;
+    }
+
+    .language-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .language-select {
+      font: inherit;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid color-mix(in srgb, CanvasText 22%, transparent);
+      background: Canvas;
+      color: CanvasText;
+      cursor: pointer;
+    }
+
+    .language-select:focus {
+      outline: 2px solid #0a66c2;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
+
 <body>
-<h1>WatchPrompter Gizlilik Politikası</h1>
-<p><strong>Son Güncelleme: 7 Ağustos 2026</strong></p>
-<p>WatchPrompter (“Uygulama”), iPhone ve Apple Watch üzerinde teleprompter özellikleri sunmak, metinleri konuşmayla senkronize etmek ve iPhone kamerasıyla video kaydını desteklemek amacıyla geliştirilmiştir.</p>
+<main>
 
-<h2>1. Topladığımız Veriler</h2>
-<p>WatchPrompter'ın kendi sunucusu, kullanıcı hesabı veya kullanıcı verilerini saklayan çevrimiçi bir veritabanı bulunmamaktadır. Geliştirici; ses kayıtlarını, videoları, teleprompter metinlerini veya konuşma transkripsiyonlarını toplamaz ya da saklamaz. Uygulama üçüncü taraf reklam veya analiz SDK'sı kullanmaz ve kullanıcıları reklam amacıyla takip etmez.</p>
+  <div class="language-bar">
+    <select
+      id="language-select"
+      class="language-select"
+      aria-label="Language"
+    >
+      <option value="en">English</option>
+      <option value="tr">Türkçe</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+    </select>
+  </div>
 
-<h2>2. Mikrofon ve Konuşma Tanıma</h2>
-<p>WatchPrompter, canlı metin takibi ve konuşmayla senaryo eşleştirme özellikleri için kullanıcının izniyle mikrofona erişebilir. Uygulama Apple'ın Speech framework'ünü kullanır. Desteklenen cihaz ve işletim sistemi koşullarında konuşma tanıma cihaz üzerinde gerçekleştirilebilir. Cihazın ve Apple'ın konuşma tanıma teknolojisinin özelliklerine bağlı olarak işlem Apple tarafından sağlanan hizmetlerden yararlanabilir. WatchPrompter geliştiricisi ses kayıtlarını veya konuşma tanıma verilerini kendi sunucularına göndermez ve saklamaz.</p>
+  <div id="content"></div>
 
-<h2>3. Kamera ve Video</h2>
-<p>WatchPrompter, kullanıcının izniyle iPhone kamerasına ve mikrofonuna erişebilir. Kaydedilen videolar cihaz üzerinde oluşturulur ve kullanıcı izin verdiğinde Fotoğraflar arşivine kaydedilebilir. Geliştirici bu video veya ses kayıtlarını kendi sunucularına yüklemez veya saklamaz.</p>
+</main>
 
-<h2>4. Apple Watch</h2>
-<p>WatchPrompter, teleprompter metinlerini, kullanıcı tercihlerini ve uygulama durumunu iPhone ile eşlenmiş Apple Watch arasında WatchConnectivity üzerinden aktarabilir. Bu içerikler geliştiricinin sunucularına aktarılmaz veya saklanmaz.</p>
+<script>
+  const translations = {
 
-<h2>5. AirPods ve Ses Kaynakları</h2>
-<p>WatchPrompter, kullanılabilir ses girişlerini belirlemek ve ses kaynağı seçimini sağlamak amacıyla iOS ses yönlendirme bilgilerine erişebilir. Bu bilgiler yalnızca ses girişini yönetmek için kullanılır ve geliştirici sunucularına gönderilmez.</p>
+    en: {
+      documentTitle: "WatchPrompter Privacy Policy",
+      metaDescription: "Privacy Policy for WatchPrompter",
+      languageLabel: "Language",
 
-<h2>6. Uygulama Tercihleri</h2>
-<p>Yazı boyutu, renkler, kaydırma seçenekleri, ses kaynağı tercihleri ve benzeri ayarlar cihaz üzerinde saklanabilir.</p>
+      title: "WatchPrompter Privacy Policy",
+      updated: "Last Updated: August 7, 2026",
 
-<h2>7. Üçüncü Taraf Reklam ve Analiz</h2>
-<p>WatchPrompter üçüncü taraf reklam ağı veya üçüncü taraf analiz SDK'sı kullanmaz, reklam profili oluşturmaz ve kullanıcıları başka uygulama veya web siteleri arasında takip etmez.</p>
+      intro:
+        "WatchPrompter (“the App”) provides teleprompter functionality on iPhone and Apple Watch, synchronizes scripts with speech, and supports video recording with the iPhone camera.",
 
-<h2>8. Veri Saklama ve Silme</h2>
-<p>Geliştirici sunucu tarafında kullanıcı hesabı veya uzak kullanıcı veri kaydı tutmaz. Cihazda saklanan tercihler ilgili ayarların değiştirilmesi ve/veya uygulamanın kaldırılması yoluyla yönetilebilir. Kamera, Mikrofon, Konuşma Tanıma ve Fotoğraflar izinleri iOS Ayarları üzerinden değiştirilebilir veya geri çekilebilir.</p>
+      sections: [
+        {
+          title: "1. Data We Collect",
+          text:
+            "WatchPrompter does not operate its own server, user-account system, or online database for storing user data. The developer does not collect or store users' audio recordings, videos, teleprompter scripts, or speech transcriptions. The App does not use third-party advertising or analytics SDKs and does not track users for advertising purposes."
+        },
+        {
+          title: "2. Microphone and Speech Recognition",
+          text:
+            "With the user's permission, WatchPrompter may access the microphone for live text tracking and speech-to-script matching. The App uses Apple's Speech framework. Speech recognition may be performed on-device when supported by the device and operating system. Depending on device capabilities and Apple's speech recognition technology, processing may involve Apple-provided services. The developer does not send audio recordings or speech-recognition data to its own servers and does not store this information."
+        },
+        {
+          title: "3. Camera and Video",
+          text:
+            "With permission, WatchPrompter may access the iPhone camera and microphone. Recorded videos are created on-device and may be saved to Photos with permission. The developer does not upload or store these recordings on its own servers."
+        },
+        {
+          title: "4. Apple Watch",
+          text:
+            "WatchPrompter may transfer scripts, preferences, and app state between iPhone and the paired Apple Watch using WatchConnectivity. This content is not transferred to or stored on servers operated by the developer."
+        },
+        {
+          title: "5. AirPods and Audio Sources",
+          text:
+            "WatchPrompter may access iOS audio-routing information to determine available audio inputs and allow source selection. This information is used only to manage audio input and is not sent to developer-operated servers."
+        },
+        {
+          title: "6. Application Preferences",
+          text:
+            "Settings such as font size, colors, scrolling options, and audio-source preferences may be stored locally on the device."
+        },
+        {
+          title: "7. Third-Party Advertising and Analytics",
+          text:
+            "WatchPrompter does not use third-party advertising networks or third-party analytics SDKs, create advertising profiles, or track users across other apps or websites."
+        },
+        {
+          title: "8. Data Retention and Deletion",
+          text:
+            "The developer does not maintain server-side user accounts or remote user-data records. Locally stored preferences can be managed by changing settings and/or removing the App. Camera, Microphone, Speech Recognition, and Photos permissions can be changed or revoked in iOS Settings."
+        },
+        {
+          title: "9. Children's Privacy",
+          text:
+            "WatchPrompter is not specifically designed for children and does not intentionally seek to collect personal information from children."
+        },
+        {
+          title: "10. Changes to This Policy",
+          text:
+            "This policy may be updated if the App's features or data-handling practices change. The current version will be published on this page."
+        }
+      ],
 
-<h2>9. Çocukların Gizliliği</h2>
-<p>WatchPrompter özellikle çocuklara yönelik değildir ve bilerek çocuklardan kişisel veri toplamayı amaçlamaz.</p>
+      contactTitle: "11. Contact",
+      developer: "WatchPrompter Developer"
+    },
 
-<h2>10. Değişiklikler</h2>
-<p>Uygulamanın özellikleri veya veri işleme uygulamaları değişirse bu politika güncellenebilir. Güncel sürüm bu sayfada yayımlanır.</p>
+    tr: {
+      documentTitle: "WatchPrompter Gizlilik Politikası",
+      metaDescription: "WatchPrompter Gizlilik Politikası",
+      languageLabel: "Dil",
 
-<h2>11. İletişim</h2>
-<p><strong>WatchPrompter Developer</strong><br><a href="mailto:omerkeskintr@icloud.com">omerkeskintr@icloud.com</a></p>
+      title: "WatchPrompter Gizlilik Politikası",
+      updated: "Son Güncelleme: 7 Ağustos 2026",
 
-<hr>
+      intro:
+        "WatchPrompter (“Uygulama”), iPhone ve Apple Watch üzerinde teleprompter özellikleri sunmak, metinleri konuşmayla senkronize etmek ve iPhone kamerasıyla video kaydını desteklemek amacıyla geliştirilmiştir.",
 
-<h1>WatchPrompter Privacy Policy</h1>
-<p><strong>Last Updated: August 7, 2026</strong></p>
-<p>WatchPrompter (“the App”) provides teleprompter functionality on iPhone and Apple Watch, synchronizes scripts with speech, and supports video recording with the iPhone camera.</p>
+      sections: [
+        {
+          title: "1. Topladığımız Veriler",
+          text:
+            "WatchPrompter'ın kendi sunucusu, kullanıcı hesabı veya kullanıcı verilerini saklayan çevrimiçi bir veritabanı bulunmamaktadır. Geliştirici; ses kayıtlarını, videoları, teleprompter metinlerini veya konuşma transkripsiyonlarını toplamaz ya da saklamaz. Uygulama üçüncü taraf reklam veya analiz SDK'sı kullanmaz ve kullanıcıları reklam amacıyla takip etmez."
+        },
+        {
+          title: "2. Mikrofon ve Konuşma Tanıma",
+          text:
+            "WatchPrompter, canlı metin takibi ve konuşmayla senaryo eşleştirme özellikleri için kullanıcının izniyle mikrofona erişebilir. Uygulama Apple'ın Speech framework'ünü kullanır. Desteklenen cihaz ve işletim sistemi koşullarında konuşma tanıma cihaz üzerinde gerçekleştirilebilir. Cihazın ve Apple'ın konuşma tanıma teknolojisinin özelliklerine bağlı olarak işlem Apple tarafından sağlanan hizmetlerden yararlanabilir. WatchPrompter geliştiricisi ses kayıtlarını veya konuşma tanıma verilerini kendi sunucularına göndermez ve saklamaz."
+        },
+        {
+          title: "3. Kamera ve Video",
+          text:
+            "WatchPrompter, kullanıcının izniyle iPhone kamerasına ve mikrofonuna erişebilir. Kaydedilen videolar cihaz üzerinde oluşturulur ve kullanıcı izin verdiğinde Fotoğraflar arşivine kaydedilebilir. Geliştirici bu video veya ses kayıtlarını kendi sunucularına yüklemez veya saklamaz."
+        },
+        {
+          title: "4. Apple Watch",
+          text:
+            "WatchPrompter, teleprompter metinlerini, kullanıcı tercihlerini ve uygulama durumunu iPhone ile eşlenmiş Apple Watch arasında WatchConnectivity üzerinden aktarabilir. Bu içerikler geliştiricinin sunucularına aktarılmaz veya saklanmaz."
+        },
+        {
+          title: "5. AirPods ve Ses Kaynakları",
+          text:
+            "WatchPrompter, kullanılabilir ses girişlerini belirlemek ve ses kaynağı seçimini sağlamak amacıyla iOS ses yönlendirme bilgilerine erişebilir. Bu bilgiler yalnızca ses girişini yönetmek için kullanılır ve geliştirici sunucularına gönderilmez."
+        },
+        {
+          title: "6. Uygulama Tercihleri",
+          text:
+            "Yazı boyutu, renkler, kaydırma seçenekleri, ses kaynağı tercihleri ve benzeri ayarlar cihaz üzerinde saklanabilir."
+        },
+        {
+          title: "7. Üçüncü Taraf Reklam ve Analiz",
+          text:
+            "WatchPrompter üçüncü taraf reklam ağı veya üçüncü taraf analiz SDK'sı kullanmaz, reklam profili oluşturmaz ve kullanıcıları başka uygulama veya web siteleri arasında takip etmez."
+        },
+        {
+          title: "8. Veri Saklama ve Silme",
+          text:
+            "Geliştirici sunucu tarafında kullanıcı hesabı veya uzak kullanıcı veri kaydı tutmaz. Cihazda saklanan tercihler ilgili ayarların değiştirilmesi ve/veya uygulamanın kaldırılması yoluyla yönetilebilir. Kamera, Mikrofon, Konuşma Tanıma ve Fotoğraflar izinleri iOS Ayarları üzerinden değiştirilebilir veya geri çekilebilir."
+        },
+        {
+          title: "9. Çocukların Gizliliği",
+          text:
+            "WatchPrompter özellikle çocuklara yönelik değildir ve bilerek çocuklardan kişisel veri toplamayı amaçlamaz."
+        },
+        {
+          title: "10. Değişiklikler",
+          text:
+            "Uygulamanın özellikleri veya veri işleme uygulamaları değişirse bu politika güncellenebilir. Güncel sürüm bu sayfada yayımlanır."
+        }
+      ],
 
-<h2>1. Data We Collect</h2>
-<p>WatchPrompter does not operate its own server, user-account system, or online database for storing user data. The developer does not collect or store users' audio recordings, videos, teleprompter scripts, or speech transcriptions. The App does not use third-party advertising or analytics SDKs and does not track users for advertising purposes.</p>
+      contactTitle: "11. İletişim",
+      developer: "WatchPrompter Developer"
+    },
 
-<h2>2. Microphone and Speech Recognition</h2>
-<p>With the user's permission, WatchPrompter may access the microphone for live text tracking and speech-to-script matching. The App uses Apple's Speech framework. Speech recognition may be performed on-device when supported by the device and operating system. Depending on device capabilities and Apple's speech recognition technology, processing may involve Apple-provided services. The developer does not send audio recordings or speech-recognition data to its own servers and does not store this information.</p>
+    de: {
+      documentTitle: "WatchPrompter Datenschutzrichtlinie",
+      metaDescription: "Datenschutzrichtlinie für WatchPrompter",
+      languageLabel: "Sprache",
 
-<h2>3. Camera and Video</h2>
-<p>With permission, WatchPrompter may access the iPhone camera and microphone. Recorded videos are created on-device and may be saved to Photos with permission. The developer does not upload or store these recordings on its own servers.</p>
+      title: "WatchPrompter Datenschutzrichtlinie",
+      updated: "Letzte Aktualisierung: 7. August 2026",
 
-<h2>4. Apple Watch</h2>
-<p>WatchPrompter may transfer scripts, preferences, and app state between iPhone and the paired Apple Watch using WatchConnectivity. This content is not transferred to or stored on servers operated by the developer.</p>
+      intro:
+        "WatchPrompter („die App“) bietet Teleprompter-Funktionen auf iPhone und Apple Watch, synchronisiert Texte mit der Sprache und unterstützt Videoaufnahmen mit der iPhone-Kamera.",
 
-<h2>5. AirPods and Audio Sources</h2>
-<p>WatchPrompter may access iOS audio-routing information to determine available audio inputs and allow source selection. This information is used only to manage audio input and is not sent to developer-operated servers.</p>
+      sections: [
+        {
+          title: "1. Von uns erfasste Daten",
+          text:
+            "WatchPrompter betreibt keinen eigenen Server, kein Benutzerkontosystem und keine Online-Datenbank zur Speicherung von Benutzerdaten. Der Entwickler erfasst oder speichert keine Audioaufnahmen, Videos, Teleprompter-Texte oder Sprachtranskriptionen der Benutzer. Die App verwendet keine Werbe- oder Analyse-SDKs von Drittanbietern und verfolgt Benutzer nicht zu Werbezwecken."
+        },
+        {
+          title: "2. Mikrofon und Spracherkennung",
+          text:
+            "Mit Zustimmung des Benutzers kann WatchPrompter für die Live-Textverfolgung und den Abgleich von Sprache und Text auf das Mikrofon zugreifen. Die App verwendet Apples Speech Framework. Die Spracherkennung kann auf unterstützten Geräten und Betriebssystemen direkt auf dem Gerät erfolgen. Abhängig von den Gerätefunktionen und Apples Spracherkennungstechnologie kann die Verarbeitung von Apple bereitgestellte Dienste einbeziehen. Der Entwickler sendet Audioaufnahmen oder Spracherkennungsdaten nicht an eigene Server und speichert diese Informationen nicht."
+        },
+        {
+          title: "3. Kamera und Video",
+          text:
+            "Mit entsprechender Berechtigung kann WatchPrompter auf die iPhone-Kamera und das Mikrofon zugreifen. Aufgenommene Videos werden auf dem Gerät erstellt und können mit Zustimmung des Benutzers in Fotos gespeichert werden. Der Entwickler lädt diese Video- oder Audioaufnahmen nicht auf eigene Server hoch und speichert sie dort nicht."
+        },
+        {
+          title: "4. Apple Watch",
+          text:
+            "WatchPrompter kann Teleprompter-Texte, Benutzereinstellungen und den App-Status über WatchConnectivity zwischen dem iPhone und der gekoppelten Apple Watch übertragen. Diese Inhalte werden weder an Server des Entwicklers übertragen noch dort gespeichert."
+        },
+        {
+          title: "5. AirPods und Audioquellen",
+          text:
+            "WatchPrompter kann auf iOS-Informationen zur Audioausgabe und -weiterleitung zugreifen, um verfügbare Audioeingänge zu ermitteln und die Auswahl einer Audioquelle zu ermöglichen. Diese Informationen werden ausschließlich zur Verwaltung des Audioeingangs verwendet und nicht an Server des Entwicklers gesendet."
+        },
+        {
+          title: "6. App-Einstellungen",
+          text:
+            "Einstellungen wie Schriftgröße, Farben, Scrolloptionen und bevorzugte Audioquellen können lokal auf dem Gerät gespeichert werden."
+        },
+        {
+          title: "7. Werbung und Analysen von Drittanbietern",
+          text:
+            "WatchPrompter verwendet keine Werbenetzwerke oder Analyse-SDKs von Drittanbietern, erstellt keine Werbeprofile und verfolgt Benutzer nicht über andere Apps oder Websites hinweg."
+        },
+        {
+          title: "8. Datenspeicherung und Löschung",
+          text:
+            "Der Entwickler führt keine serverseitigen Benutzerkonten oder entfernten Benutzerdatensätze. Lokal gespeicherte Einstellungen können durch Änderung der entsprechenden Einstellungen und/oder durch Entfernen der App verwaltet werden. Berechtigungen für Kamera, Mikrofon, Spracherkennung und Fotos können in den iOS-Einstellungen geändert oder widerrufen werden."
+        },
+        {
+          title: "9. Datenschutz von Kindern",
+          text:
+            "WatchPrompter richtet sich nicht speziell an Kinder und beabsichtigt nicht, wissentlich personenbezogene Daten von Kindern zu erfassen."
+        },
+        {
+          title: "10. Änderungen dieser Datenschutzrichtlinie",
+          text:
+            "Diese Datenschutzrichtlinie kann aktualisiert werden, wenn sich die Funktionen der App oder die Verfahren zur Datenverarbeitung ändern. Die jeweils aktuelle Version wird auf dieser Seite veröffentlicht."
+        }
+      ],
 
-<h2>6. Application Preferences</h2>
-<p>Settings such as font size, colors, scrolling options, and audio-source preferences may be stored locally on the device.</p>
+      contactTitle: "11. Kontakt",
+      developer: "WatchPrompter Developer"
+    },
 
-<h2>7. Third-Party Advertising and Analytics</h2>
-<p>WatchPrompter does not use third-party advertising networks or third-party analytics SDKs, create advertising profiles, or track users across other apps or websites.</p>
+    fr: {
+      documentTitle: "Politique de confidentialité de WatchPrompter",
+      metaDescription: "Politique de confidentialité de WatchPrompter",
+      languageLabel: "Langue",
 
-<h2>8. Data Retention and Deletion</h2>
-<p>The developer does not maintain server-side user accounts or remote user-data records. Locally stored preferences can be managed by changing settings and/or removing the App. Camera, Microphone, Speech Recognition, and Photos permissions can be changed or revoked in iOS Settings.</p>
+      title: "Politique de confidentialité de WatchPrompter",
+      updated: "Dernière mise à jour : 7 août 2026",
 
-<h2>9. Children's Privacy</h2>
-<p>WatchPrompter is not specifically designed for children and does not intentionally seek to collect personal information from children.</p>
+      intro:
+        "WatchPrompter (« l’App ») propose des fonctionnalités de téléprompteur sur iPhone et Apple Watch, synchronise les textes avec la parole et permet l’enregistrement vidéo avec la caméra de l’iPhone.",
 
-<h2>10. Changes to This Policy</h2>
-<p>This policy may be updated if the App's features or data-handling practices change. The current version will be published on this page.</p>
+      sections: [
+        {
+          title: "1. Données que nous collectons",
+          text:
+            "WatchPrompter n’exploite aucun serveur propre, système de compte utilisateur ou base de données en ligne destinée à stocker les données des utilisateurs. Le développeur ne collecte ni ne conserve les enregistrements audio, vidéos, textes de téléprompteur ou transcriptions vocales des utilisateurs. L’App n’utilise aucun SDK publicitaire ou analytique tiers et ne suit pas les utilisateurs à des fins publicitaires."
+        },
+        {
+          title: "2. Microphone et reconnaissance vocale",
+          text:
+            "Avec l’autorisation de l’utilisateur, WatchPrompter peut accéder au microphone pour le suivi du texte en direct et la correspondance entre la parole et le texte. L’App utilise le framework Speech d’Apple. Lorsque l’appareil et le système d’exploitation le permettent, la reconnaissance vocale peut être effectuée directement sur l’appareil. Selon les capacités de l’appareil et la technologie de reconnaissance vocale d’Apple, le traitement peut faire appel à des services fournis par Apple. Le développeur n’envoie pas les enregistrements audio ni les données de reconnaissance vocale vers ses propres serveurs et ne conserve pas ces informations."
+        },
+        {
+          title: "3. Caméra et vidéo",
+          text:
+            "Avec votre autorisation, WatchPrompter peut accéder à la caméra et au microphone de l’iPhone. Les vidéos enregistrées sont créées sur l’appareil et peuvent être enregistrées dans Photos avec votre autorisation. Le développeur ne téléverse ni ne conserve ces enregistrements vidéo ou audio sur ses propres serveurs."
+        },
+        {
+          title: "4. Apple Watch",
+          text:
+            "WatchPrompter peut transférer les textes du téléprompteur, les préférences de l’utilisateur et l’état de l’App entre l’iPhone et l’Apple Watch jumelée via WatchConnectivity. Ces contenus ne sont ni transférés ni stockés sur des serveurs exploités par le développeur."
+        },
+        {
+          title: "5. AirPods et sources audio",
+          text:
+            "WatchPrompter peut accéder aux informations de routage audio d’iOS afin d’identifier les entrées audio disponibles et de permettre la sélection de la source. Ces informations sont utilisées uniquement pour gérer l’entrée audio et ne sont pas envoyées aux serveurs du développeur."
+        },
+        {
+          title: "6. Préférences de l’App",
+          text:
+            "Les réglages tels que la taille du texte, les couleurs, les options de défilement et les préférences de source audio peuvent être stockés localement sur l’appareil."
+        },
+        {
+          title: "7. Publicité et analyses tierces",
+          text:
+            "WatchPrompter n’utilise aucun réseau publicitaire tiers ni SDK analytique tiers, ne crée aucun profil publicitaire et ne suit pas les utilisateurs entre différentes apps ou différents sites web."
+        },
+        {
+          title: "8. Conservation et suppression des données",
+          text:
+            "Le développeur ne conserve aucun compte utilisateur côté serveur ni aucune donnée utilisateur à distance. Les préférences enregistrées localement peuvent être gérées en modifiant les réglages correspondants et/ou en supprimant l’App. Les autorisations relatives à la caméra, au microphone, à la reconnaissance vocale et à Photos peuvent être modifiées ou révoquées dans les réglages d’iOS."
+        },
+        {
+          title: "9. Confidentialité des enfants",
+          text:
+            "WatchPrompter n’est pas spécifiquement destiné aux enfants et ne cherche pas intentionnellement à collecter des données personnelles auprès d’enfants."
+        },
+        {
+          title: "10. Modifications de cette politique",
+          text:
+            "Cette politique peut être mise à jour si les fonctionnalités de l’App ou ses pratiques de traitement des données évoluent. La version actuelle sera publiée sur cette page."
+        }
+      ],
 
-<h2>11. Contact</h2>
-<p><strong>WatchPrompter Developer</strong><br><a href="mailto:omerkeskintr@icloud.com">omerkeskintr@icloud.com</a></p>
+      contactTitle: "11. Contact",
+      developer: "WatchPrompter Developer"
+    },
+
+    es: {
+      documentTitle: "Política de privacidad de WatchPrompter",
+      metaDescription: "Política de privacidad de WatchPrompter",
+      languageLabel: "Idioma",
+
+      title: "Política de privacidad de WatchPrompter",
+      updated: "Última actualización: 7 de agosto de 2026",
+
+      intro:
+        "WatchPrompter («la App») ofrece funciones de teleprompter en iPhone y Apple Watch, sincroniza los textos con la voz y permite grabar vídeo con la cámara del iPhone.",
+
+      sections: [
+        {
+          title: "1. Datos que recopilamos",
+          text:
+            "WatchPrompter no opera servidores propios, sistemas de cuentas de usuario ni bases de datos en línea para almacenar datos de los usuarios. El desarrollador no recopila ni almacena grabaciones de audio, vídeos, textos del teleprompter ni transcripciones de voz de los usuarios. La App no utiliza SDK de publicidad o análisis de terceros ni realiza seguimiento de los usuarios con fines publicitarios."
+        },
+        {
+          title: "2. Micrófono y reconocimiento de voz",
+          text:
+            "Con el permiso del usuario, WatchPrompter puede acceder al micrófono para realizar el seguimiento del texto en directo y relacionar la voz con el guion. La App utiliza el framework Speech de Apple. El reconocimiento de voz puede realizarse en el propio dispositivo cuando el dispositivo y el sistema operativo lo admitan. Dependiendo de las capacidades del dispositivo y de la tecnología de reconocimiento de voz de Apple, el procesamiento puede utilizar servicios proporcionados por Apple. El desarrollador no envía grabaciones de audio ni datos de reconocimiento de voz a sus propios servidores ni almacena esta información."
+        },
+        {
+          title: "3. Cámara y vídeo",
+          text:
+            "Con permiso, WatchPrompter puede acceder a la cámara y al micrófono del iPhone. Los vídeos grabados se crean en el dispositivo y pueden guardarse en Fotos con autorización del usuario. El desarrollador no carga ni almacena estas grabaciones de vídeo o audio en sus propios servidores."
+        },
+        {
+          title: "4. Apple Watch",
+          text:
+            "WatchPrompter puede transferir textos del teleprompter, preferencias del usuario y el estado de la App entre el iPhone y el Apple Watch enlazado mediante WatchConnectivity. Este contenido no se transfiere ni se almacena en servidores operados por el desarrollador."
+        },
+        {
+          title: "5. AirPods y fuentes de audio",
+          text:
+            "WatchPrompter puede acceder a la información de enrutamiento de audio de iOS para determinar las entradas de audio disponibles y permitir la selección de la fuente. Esta información se utiliza únicamente para gestionar la entrada de audio y no se envía a los servidores del desarrollador."
+        },
+        {
+          title: "6. Preferencias de la App",
+          text:
+            "Los ajustes como el tamaño del texto, los colores, las opciones de desplazamiento y las preferencias de fuente de audio pueden almacenarse localmente en el dispositivo."
+        },
+        {
+          title: "7. Publicidad y análisis de terceros",
+          text:
+            "WatchPrompter no utiliza redes publicitarias de terceros ni SDK de análisis de terceros, no crea perfiles publicitarios ni realiza seguimiento de los usuarios entre otras apps o sitios web."
+        },
+        {
+          title: "8. Conservación y eliminación de datos",
+          text:
+            "El desarrollador no mantiene cuentas de usuario en servidores ni registros remotos de datos de usuario. Las preferencias almacenadas localmente pueden gestionarse modificando los ajustes correspondientes y/o eliminando la App. Los permisos de Cámara, Micrófono, Reconocimiento de voz y Fotos pueden modificarse o revocarse desde los Ajustes de iOS."
+        },
+        {
+          title: "9. Privacidad de los menores",
+          text:
+            "WatchPrompter no está diseñada específicamente para menores y no pretende recopilar deliberadamente información personal de menores."
+        },
+        {
+          title: "10. Cambios en esta política",
+          text:
+            "Esta política puede actualizarse si cambian las funciones de la App o sus prácticas de tratamiento de datos. La versión actual se publicará en esta página."
+        }
+      ],
+
+      contactTitle: "11. Contacto",
+      developer: "WatchPrompter Developer"
+    }
+  };
+
+
+  const supportedLanguages = ["en", "tr", "de", "fr", "es"];
+
+  const languageSelect = document.getElementById("language-select");
+  const content = document.getElementById("content");
+  const metaDescription = document.getElementById("meta-description");
+
+
+  function getUrlLanguage() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+
+    if (lang && supportedLanguages.includes(lang.toLowerCase())) {
+      return lang.toLowerCase();
+    }
+
+    return null;
+  }
+
+
+  function getStoredLanguage() {
+    try {
+      const lang = localStorage.getItem("watchprompter-language");
+
+      if (lang && supportedLanguages.includes(lang)) {
+        return lang;
+      }
+    } catch (error) {
+      // localStorage may be unavailable.
+    }
+
+    return null;
+  }
+
+
+  function getBrowserLanguage() {
+    const browserLanguages =
+      navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language];
+
+    for (const language of browserLanguages) {
+      if (!language) continue;
+
+      const code = language.toLowerCase().split("-")[0];
+
+      if (supportedLanguages.includes(code)) {
+        return code;
+      }
+    }
+
+    return "en";
+  }
+
+
+  function getInitialLanguage() {
+    return (
+      getUrlLanguage() ||
+      getStoredLanguage() ||
+      getBrowserLanguage() ||
+      "en"
+    );
+  }
+
+
+  function renderLanguage(lang) {
+    const t = translations[lang] || translations.en;
+
+    document.documentElement.lang = lang;
+    document.title = t.documentTitle;
+    metaDescription.setAttribute("content", t.metaDescription);
+
+    languageSelect.value = lang;
+    languageSelect.setAttribute("aria-label", t.languageLabel);
+
+    const sectionsHTML = t.sections
+      .map(
+        section => `
+          <h2>${section.title}</h2>
+          <p>${section.text}</p>
+        `
+      )
+      .join("");
+
+    content.innerHTML = `
+      <h1>${t.title}</h1>
+
+      <p>
+        <strong>${t.updated}</strong>
+      </p>
+
+      <p>${t.intro}</p>
+
+      ${sectionsHTML}
+
+      <h2>${t.contactTitle}</h2>
+
+      <p>
+        <strong>${t.developer}</strong><br>
+        <a href="mailto:omerkeskintr@icloud.com">
+          omerkeskintr@icloud.com
+        </a>
+      </p>
+    `;
+  }
+
+
+  languageSelect.addEventListener("change", function () {
+    const lang = this.value;
+
+    try {
+      localStorage.setItem("watchprompter-language", lang);
+    } catch (error) {
+      // Continue normally if localStorage is unavailable.
+    }
+
+    renderLanguage(lang);
+  });
+
+
+  renderLanguage(getInitialLanguage());
+</script>
+
 </body>
 </html>
