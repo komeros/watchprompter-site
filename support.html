@@ -1,10 +1,17 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>WatchPrompter Support</title>
-  <meta name="description" content="WatchPrompter destek sayfası">
+
+  <meta
+    id="meta-description"
+    name="description"
+    content="Support for WatchPrompter on iPhone and Apple Watch"
+  >
+
   <style>
     :root {
       color-scheme: light dark;
@@ -49,10 +56,26 @@
       opacity: 0.7;
     }
 
-    hr {
-      border: 0;
-      border-top: 1px solid color-mix(in srgb, CanvasText 18%, transparent);
-      margin: 48px 0;
+    .language-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .language-select {
+      font: inherit;
+      padding: 8px 12px;
+      border-radius: 10px;
+      border: 1px solid color-mix(in srgb, CanvasText 22%, transparent);
+      background: Canvas;
+      color: CanvasText;
+      cursor: pointer;
+    }
+
+    .language-select:focus {
+      outline: 2px solid #0a66c2;
+      outline-offset: 2px;
     }
   </style>
 </head>
@@ -60,114 +83,374 @@
 <body>
 <main>
 
-  <h1>WatchPrompter Destek</h1>
-  <p class="muted">iPhone ve Apple Watch için teleprompter desteği</p>
-
-  <div class="card">
-    <h2>Destek ile iletişime geçin</h2>
-    <p>
-      WatchPrompter ile ilgili soru, hata bildirimi veya geri bildirim için:
-    </p>
-    <p>
-      <strong>E-posta:</strong>
-      <a href="mailto:omerkeskintr@icloud.com">
-        omerkeskintr@icloud.com
-      </a>
-    </p>
+  <div class="language-bar">
+    <select
+      id="language-select"
+      class="language-select"
+      aria-label="Language"
+    >
+      <option value="en">English</option>
+      <option value="tr">Türkçe</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+    </select>
   </div>
 
-  <h2>Sık karşılaşılan konular</h2>
-
-  <p>
-    <strong>Apple Watch bağlantısı:</strong><br>
-    iPhone ve Apple Watch'un eşlenmiş olduğundan ve WatchPrompter'ın
-    Apple Watch üzerinde yüklü olduğundan emin olun.
-  </p>
-
-  <p>
-    <strong>Ses takibi çalışmıyorsa:</strong><br>
-    iPhone Ayarları üzerinden Mikrofon ve Konuşma Tanıma izinlerinin
-    WatchPrompter için açık olduğunu kontrol edin.
-  </p>
-
-  <p>
-    <strong>Kamera veya video kaydı çalışmıyorsa:</strong><br>
-    Kamera, Mikrofon ve Fotoğraflar izinlerinin etkin olduğundan emin olun.
-  </p>
-
-  <p>
-    <strong>AirPods veya ses kaynağı görünmüyorsa:</strong><br>
-    Ses cihazının iPhone'a bağlı olduğunu kontrol edin ve uygulamadaki
-    Ses Kaynakları bölümünden uygun giriş kaynağını tekrar seçin.
-  </p>
-
-  <p>
-    <strong>Apple Watch'a metin gönderilemiyorsa:</strong><br>
-    iPhone ve Apple Watch'un birbirine erişebilir durumda olduğundan emin olun.
-    Gerekirse WatchPrompter'ı iki cihazda da yeniden açın.
-  </p>
-
-  <h2>Gizlilik</h2>
-  <p>
-    WatchPrompter Gizlilik Politikası:
-    <a href="privacy.html">Gizlilik Politikası</a>
-  </p>
-
-  <hr>
-
-  <h1>WatchPrompter Support</h1>
-  <p class="muted">Teleprompter support for iPhone and Apple Watch</p>
-
-  <div class="card">
-    <h2>Contact Support</h2>
-    <p>
-      For questions, bug reports, or feedback about WatchPrompter:
-    </p>
-    <p>
-      <strong>Email:</strong>
-      <a href="mailto:omerkeskintr@icloud.com">
-        omerkeskintr@icloud.com
-      </a>
-    </p>
-  </div>
-
-  <h2>Common Issues</h2>
-
-  <p>
-    <strong>Apple Watch connection:</strong><br>
-    Make sure your iPhone and Apple Watch are paired and that WatchPrompter
-    is installed on your Apple Watch.
-  </p>
-
-  <p>
-    <strong>Speech tracking is not working:</strong><br>
-    Check that Microphone and Speech Recognition permissions are enabled
-    for WatchPrompter in iPhone Settings.
-  </p>
-
-  <p>
-    <strong>Camera or video recording is not working:</strong><br>
-    Make sure Camera, Microphone, and Photos permissions are enabled.
-  </p>
-
-  <p>
-    <strong>AirPods or audio source is not shown:</strong><br>
-    Make sure the audio device is connected to the iPhone, then select the
-    appropriate input again from the Audio Sources section.
-  </p>
-
-  <p>
-    <strong>Unable to send text to Apple Watch:</strong><br>
-    Make sure the iPhone and Apple Watch can communicate with each other.
-    If necessary, reopen WatchPrompter on both devices.
-  </p>
-
-  <h2>Privacy</h2>
-  <p>
-    Read the WatchPrompter Privacy Policy:
-    <a href="privacy.html">Privacy Policy</a>
-  </p>
+  <div id="content"></div>
 
 </main>
+
+<script>
+  const translations = {
+
+    en: {
+      documentTitle: "WatchPrompter Support",
+      metaDescription: "Support for WatchPrompter on iPhone and Apple Watch",
+      languageLabel: "Language",
+
+      title: "WatchPrompter Support",
+      subtitle: "Teleprompter support for iPhone and Apple Watch",
+
+      contactTitle: "Contact Support",
+      contactText: "For questions, bug reports, or feedback about WatchPrompter:",
+      emailLabel: "Email:",
+
+      issuesTitle: "Common Issues",
+
+      watchTitle: "Apple Watch connection:",
+      watchText:
+        "Make sure your iPhone and Apple Watch are paired and that WatchPrompter is installed on your Apple Watch.",
+
+      speechTitle: "Speech tracking is not working:",
+      speechText:
+        "Check that Microphone and Speech Recognition permissions are enabled for WatchPrompter in iPhone Settings.",
+
+      cameraTitle: "Camera or video recording is not working:",
+      cameraText:
+        "Make sure Camera, Microphone, and Photos permissions are enabled.",
+
+      audioTitle: "AirPods or audio source is not shown:",
+      audioText:
+        "Make sure the audio device is connected to the iPhone, then select the appropriate input again from the Audio Sources section.",
+
+      sendTitle: "Unable to send text to Apple Watch:",
+      sendText:
+        "Make sure the iPhone and Apple Watch can communicate with each other. If necessary, reopen WatchPrompter on both devices.",
+
+      privacyTitle: "Privacy",
+      privacyText: "Read the WatchPrompter Privacy Policy:",
+      privacyLink: "Privacy Policy"
+    },
+
+    tr: {
+      documentTitle: "WatchPrompter Destek",
+      metaDescription: "iPhone ve Apple Watch için WatchPrompter destek sayfası",
+      languageLabel: "Dil",
+
+      title: "WatchPrompter Destek",
+      subtitle: "iPhone ve Apple Watch için teleprompter desteği",
+
+      contactTitle: "Destek ile iletişime geçin",
+      contactText:
+        "WatchPrompter ile ilgili soru, hata bildirimi veya geri bildirim için:",
+      emailLabel: "E-posta:",
+
+      issuesTitle: "Sık karşılaşılan konular",
+
+      watchTitle: "Apple Watch bağlantısı:",
+      watchText:
+        "iPhone ve Apple Watch'un eşlenmiş olduğundan ve WatchPrompter'ın Apple Watch üzerinde yüklü olduğundan emin olun.",
+
+      speechTitle: "Ses takibi çalışmıyorsa:",
+      speechText:
+        "iPhone Ayarları üzerinden Mikrofon ve Konuşma Tanıma izinlerinin WatchPrompter için açık olduğunu kontrol edin.",
+
+      cameraTitle: "Kamera veya video kaydı çalışmıyorsa:",
+      cameraText:
+        "Kamera, Mikrofon ve Fotoğraflar izinlerinin etkin olduğundan emin olun.",
+
+      audioTitle: "AirPods veya ses kaynağı görünmüyorsa:",
+      audioText:
+        "Ses cihazının iPhone'a bağlı olduğunu kontrol edin ve uygulamadaki Ses Kaynakları bölümünden uygun giriş kaynağını tekrar seçin.",
+
+      sendTitle: "Apple Watch'a metin gönderilemiyorsa:",
+      sendText:
+        "iPhone ve Apple Watch'un birbirine erişebilir durumda olduğundan emin olun. Gerekirse WatchPrompter'ı iki cihazda da yeniden açın.",
+
+      privacyTitle: "Gizlilik",
+      privacyText: "WatchPrompter Gizlilik Politikası:",
+      privacyLink: "Gizlilik Politikası"
+    },
+
+    de: {
+      documentTitle: "WatchPrompter Support",
+      metaDescription: "Support für WatchPrompter auf iPhone und Apple Watch",
+      languageLabel: "Sprache",
+
+      title: "WatchPrompter Support",
+      subtitle: "Teleprompter-Support für iPhone und Apple Watch",
+
+      contactTitle: "Support kontaktieren",
+      contactText:
+        "Bei Fragen, Fehlermeldungen oder Feedback zu WatchPrompter:",
+      emailLabel: "E-Mail:",
+
+      issuesTitle: "Häufige Probleme",
+
+      watchTitle: "Apple Watch-Verbindung:",
+      watchText:
+        "Stelle sicher, dass dein iPhone und deine Apple Watch gekoppelt sind und WatchPrompter auf deiner Apple Watch installiert ist.",
+
+      speechTitle: "Die Sprachverfolgung funktioniert nicht:",
+      speechText:
+        "Überprüfe in den iPhone-Einstellungen, ob WatchPrompter Zugriff auf Mikrofon und Spracherkennung hat.",
+
+      cameraTitle: "Kamera oder Videoaufnahme funktioniert nicht:",
+      cameraText:
+        "Stelle sicher, dass die Berechtigungen für Kamera, Mikrofon und Fotos aktiviert sind.",
+
+      audioTitle: "AirPods oder Audioquelle werden nicht angezeigt:",
+      audioText:
+        "Stelle sicher, dass das Audiogerät mit dem iPhone verbunden ist. Wähle anschließend im Bereich „Audioquellen“ erneut den passenden Eingang aus.",
+
+      sendTitle: "Text kann nicht an die Apple Watch gesendet werden:",
+      sendText:
+        "Stelle sicher, dass iPhone und Apple Watch miteinander kommunizieren können. Öffne WatchPrompter bei Bedarf auf beiden Geräten erneut.",
+
+      privacyTitle: "Datenschutz",
+      privacyText: "Lies die Datenschutzrichtlinie von WatchPrompter:",
+      privacyLink: "Datenschutzrichtlinie"
+    },
+
+    fr: {
+      documentTitle: "Assistance WatchPrompter",
+      metaDescription: "Assistance pour WatchPrompter sur iPhone et Apple Watch",
+      languageLabel: "Langue",
+
+      title: "Assistance WatchPrompter",
+      subtitle: "Assistance pour le téléprompteur sur iPhone et Apple Watch",
+
+      contactTitle: "Contacter l’assistance",
+      contactText:
+        "Pour toute question, tout signalement de bug ou tout commentaire concernant WatchPrompter :",
+      emailLabel: "E-mail :",
+
+      issuesTitle: "Problèmes courants",
+
+      watchTitle: "Connexion à l’Apple Watch :",
+      watchText:
+        "Assurez-vous que votre iPhone et votre Apple Watch sont jumelés et que WatchPrompter est installé sur votre Apple Watch.",
+
+      speechTitle: "Le suivi vocal ne fonctionne pas :",
+      speechText:
+        "Dans les réglages de l’iPhone, vérifiez que WatchPrompter dispose des autorisations pour le microphone et la reconnaissance vocale.",
+
+      cameraTitle: "La caméra ou l’enregistrement vidéo ne fonctionne pas :",
+      cameraText:
+        "Assurez-vous que les autorisations pour la caméra, le microphone et Photos sont activées.",
+
+      audioTitle: "Les AirPods ou la source audio ne s’affichent pas :",
+      audioText:
+        "Assurez-vous que l’appareil audio est connecté à l’iPhone, puis sélectionnez à nouveau l’entrée appropriée dans la section des sources audio.",
+
+      sendTitle: "Impossible d’envoyer le texte vers l’Apple Watch :",
+      sendText:
+        "Assurez-vous que l’iPhone et l’Apple Watch peuvent communiquer entre eux. Si nécessaire, rouvrez WatchPrompter sur les deux appareils.",
+
+      privacyTitle: "Confidentialité",
+      privacyText: "Consultez la politique de confidentialité de WatchPrompter :",
+      privacyLink: "Politique de confidentialité"
+    },
+
+    es: {
+      documentTitle: "Soporte de WatchPrompter",
+      metaDescription: "Soporte para WatchPrompter en iPhone y Apple Watch",
+      languageLabel: "Idioma",
+
+      title: "Soporte de WatchPrompter",
+      subtitle: "Soporte del teleprompter para iPhone y Apple Watch",
+
+      contactTitle: "Contactar con soporte",
+      contactText:
+        "Para preguntas, informes de errores o comentarios sobre WatchPrompter:",
+      emailLabel: "Correo electrónico:",
+
+      issuesTitle: "Problemas frecuentes",
+
+      watchTitle: "Conexión con Apple Watch:",
+      watchText:
+        "Asegúrate de que tu iPhone y Apple Watch estén enlazados y de que WatchPrompter esté instalado en tu Apple Watch.",
+
+      speechTitle: "El seguimiento de voz no funciona:",
+      speechText:
+        "Comprueba en los Ajustes del iPhone que WatchPrompter tenga permisos para acceder al micrófono y al reconocimiento de voz.",
+
+      cameraTitle: "La cámara o la grabación de vídeo no funcionan:",
+      cameraText:
+        "Asegúrate de que los permisos de Cámara, Micrófono y Fotos estén activados.",
+
+      audioTitle: "Los AirPods o la fuente de audio no aparecen:",
+      audioText:
+        "Asegúrate de que el dispositivo de audio esté conectado al iPhone y vuelve a seleccionar la entrada adecuada en la sección de fuentes de audio.",
+
+      sendTitle: "No se puede enviar el texto al Apple Watch:",
+      sendText:
+        "Asegúrate de que el iPhone y el Apple Watch puedan comunicarse entre sí. Si es necesario, vuelve a abrir WatchPrompter en ambos dispositivos.",
+
+      privacyTitle: "Privacidad",
+      privacyText: "Consulta la política de privacidad de WatchPrompter:",
+      privacyLink: "Política de privacidad"
+    }
+  };
+
+
+  const supportedLanguages = ["en", "tr", "de", "fr", "es"];
+
+  const languageSelect = document.getElementById("language-select");
+  const content = document.getElementById("content");
+  const metaDescription = document.getElementById("meta-description");
+
+
+  function getUrlLanguage() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+
+    if (lang && supportedLanguages.includes(lang.toLowerCase())) {
+      return lang.toLowerCase();
+    }
+
+    return null;
+  }
+
+
+  function getStoredLanguage() {
+    try {
+      const lang = localStorage.getItem("watchprompter-support-language");
+
+      if (lang && supportedLanguages.includes(lang)) {
+        return lang;
+      }
+    } catch (error) {
+      // localStorage may be unavailable in some browsing modes.
+    }
+
+    return null;
+  }
+
+
+  function getBrowserLanguage() {
+    const browserLanguages =
+      navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language];
+
+    for (const language of browserLanguages) {
+      if (!language) continue;
+
+      const code = language.toLowerCase().split("-")[0];
+
+      if (supportedLanguages.includes(code)) {
+        return code;
+      }
+    }
+
+    return "en";
+  }
+
+
+  function getInitialLanguage() {
+    return (
+      getUrlLanguage() ||
+      getStoredLanguage() ||
+      getBrowserLanguage() ||
+      "en"
+    );
+  }
+
+
+  function renderLanguage(lang) {
+    const t = translations[lang] || translations.en;
+
+    document.documentElement.lang = lang;
+    document.title = t.documentTitle;
+    metaDescription.setAttribute("content", t.metaDescription);
+
+    languageSelect.value = lang;
+    languageSelect.setAttribute("aria-label", t.languageLabel);
+
+    content.innerHTML = `
+      <h1>${t.title}</h1>
+      <p class="muted">${t.subtitle}</p>
+
+      <div class="card">
+        <h2>${t.contactTitle}</h2>
+
+        <p>${t.contactText}</p>
+
+        <p>
+          <strong>${t.emailLabel}</strong>
+          <a href="mailto:omerkeskintr@icloud.com">
+            omerkeskintr@icloud.com
+          </a>
+        </p>
+      </div>
+
+      <h2>${t.issuesTitle}</h2>
+
+      <p>
+        <strong>${t.watchTitle}</strong><br>
+        ${t.watchText}
+      </p>
+
+      <p>
+        <strong>${t.speechTitle}</strong><br>
+        ${t.speechText}
+      </p>
+
+      <p>
+        <strong>${t.cameraTitle}</strong><br>
+        ${t.cameraText}
+      </p>
+
+      <p>
+        <strong>${t.audioTitle}</strong><br>
+        ${t.audioText}
+      </p>
+
+      <p>
+        <strong>${t.sendTitle}</strong><br>
+        ${t.sendText}
+      </p>
+
+      <h2>${t.privacyTitle}</h2>
+
+      <p>
+        ${t.privacyText}
+        <a href="privacy.html">${t.privacyLink}</a>
+      </p>
+    `;
+  }
+
+
+  languageSelect.addEventListener("change", function () {
+    const lang = this.value;
+
+    try {
+      localStorage.setItem(
+        "watchprompter-support-language",
+        lang
+      );
+    } catch (error) {
+      // Continue normally if localStorage is unavailable.
+    }
+
+    renderLanguage(lang);
+  });
+
+
+  renderLanguage(getInitialLanguage());
+</script>
+
 </body>
 </html>
