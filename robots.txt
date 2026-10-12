@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://watchprompter.com/sitemap.xml

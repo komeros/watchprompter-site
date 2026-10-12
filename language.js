@@ -1,0 +1,1 @@
+document.getElementById('language').addEventListener('change',e=>{location.href='/'+e.target.value+'/'});
