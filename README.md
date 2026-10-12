@@ -1,5 +1,9 @@
 # WatchPrompter website
 
-Database-free static marketing website. English, Turkish and Spanish have separate indexable routes: /en/, /tr/, /es/. Root defaults to English. Language switch preserves explicit user choice via route. Existing support and privacy documents are preserved.
+Static, database-free multilingual marketing site deployed to Vercel from repository root. Routes: /en/, /tr/, /es/. Root defaults to English. Existing support and privacy pages are preserved.
 
-Deploy the repository root on Vercel with Framework Preset Other; no install or build commands required. Main is the production branch. Domain: watchprompter.com; www redirects to apex. App Store ID: 6799114373. The device illustrations are labelled as illustrative interfaces.
+The six supplied app promotional screenshots are compressed as WebP in assets/. Screens inside those images are unchanged and shown in Turkish; English and Spanish pages state this. Hero and walkthrough use CSS framing of the supplied artwork; the gallery links to complete images. No generated app UI, fabricated reviews, or rating claims.
+
+Language selector preserves the section anchor. Mobile navigation and native details/summary FAQ work without dependencies. No build or install commands needed.
+
+App Store ID: 6799114373. Custom domain: watchprompter.com; www redirects to apex.
