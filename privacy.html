@@ -88,6 +88,9 @@
       <option value="de">Deutsch</option>
       <option value="fr">Français</option>
       <option value="es">Español</option>
+      <option value="zh">简体中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
     </select>
   </div>
 
@@ -440,7 +443,174 @@
   };
 
 
-  const supportedLanguages = ["en", "tr", "de", "fr", "es"];
+  Object.assign(translations, {
+  "zh": {
+    "documentTitle": "WatchPrompter 隐私政策",
+    "metaDescription": "WatchPrompter 隐私政策",
+    "languageLabel": "语言",
+    "title": "WatchPrompter 隐私政策",
+    "updated": "最后更新：2026年8月7日",
+    "intro": "WatchPrompter（以下简称“本应用”）为 iPhone 和 Apple Watch 提供提词功能，使文稿与语音同步，并支持使用 iPhone 相机录制视频。",
+    "sections": [
+      {
+        "title": "1. 我们收集的数据",
+        "text": "WatchPrompter 不运营用于存储用户数据的自有服务器、用户账户系统或在线数据库。开发者不收集或存储用户的录音、视频、提词文稿或语音转写文本。本应用不使用第三方广告或分析 SDK，也不为广告目的跟踪用户。"
+      },
+      {
+        "title": "2. 麦克风和语音识别",
+        "text": "经用户许可，WatchPrompter 可以访问麦克风，以实现实时文本跟随和语音与文稿匹配。本应用使用 Apple 的 Speech 框架。在设备和操作系统支持的情况下，语音识别可以在设备上进行。根据设备功能及 Apple 语音识别技术的具体情况，处理过程可能涉及 Apple 提供的服务。开发者不会将录音或语音识别数据发送至自有服务器，也不会存储这些信息。"
+      },
+      {
+        "title": "3. 相机和视频",
+        "text": "经许可，WatchPrompter 可以访问 iPhone 的相机和麦克风。录制的视频在设备上生成，并可在获得许可后保存至“照片”。开发者不会将这些录制内容上传至自有服务器或在其上存储。"
+      },
+      {
+        "title": "4. Apple Watch",
+        "text": "WatchPrompter 可以通过 WatchConnectivity 在 iPhone 与已配对的 Apple Watch 之间传输文稿、偏好设置和应用状态。这些内容不会传输至开发者运营的服务器，也不会在其上存储。"
+      },
+      {
+        "title": "5. AirPods 和音频来源",
+        "text": "WatchPrompter 可以访问 iOS 音频路由信息，以识别可用的音频输入并允许选择来源。这些信息仅用于管理音频输入，不会发送至开发者运营的服务器。"
+      },
+      {
+        "title": "6. 应用偏好设置",
+        "text": "字体大小、颜色、滚动选项和音频来源偏好等设置可以保存在设备本地。"
+      },
+      {
+        "title": "7. 第三方广告和分析",
+        "text": "WatchPrompter 不使用第三方广告网络或第三方分析 SDK，不建立广告画像，也不跨其他应用或网站跟踪用户。"
+      },
+      {
+        "title": "8. 数据保留与删除",
+        "text": "开发者不维护服务器端用户账户或远程用户数据记录。设备本地存储的偏好设置可以通过更改设置和/或移除本应用进行管理。相机、麦克风、语音识别和照片权限可以在 iOS 的“设置”中更改或撤销。"
+      },
+      {
+        "title": "9. 儿童隐私",
+        "text": "WatchPrompter 并非专为儿童设计，也不会有意收集儿童的个人信息。"
+      },
+      {
+        "title": "10. 本政策的变更",
+        "text": "如果本应用的功能或数据处理方式发生变化，本政策可能会更新。最新版本将在本页面发布。"
+      }
+    ],
+    "contactTitle": "11. 联系方式",
+    "developer": "WatchPrompter 开发者"
+  },
+  "ja": {
+    "documentTitle": "WatchPrompter プライバシーポリシー",
+    "metaDescription": "WatchPrompter のプライバシーポリシー",
+    "languageLabel": "言語",
+    "title": "WatchPrompter プライバシーポリシー",
+    "updated": "最終更新日：2026年8月7日",
+    "intro": "WatchPrompter（以下「本アプリ」）は、iPhone と Apple Watch でテレプロンプター機能を提供し、原稿を音声に合わせて同期させ、iPhone のカメラによる動画撮影に対応します。",
+    "sections": [
+      {
+        "title": "1. 収集するデータ",
+        "text": "WatchPrompter は、ユーザーデータを保存するための独自のサーバー、ユーザーアカウントシステム、オンラインデータベースを運営していません。開発者は、ユーザーの音声録音、動画、テレプロンプターの原稿、音声の文字起こしを収集または保存しません。本アプリは第三者の広告・分析 SDK を使用せず、広告目的でユーザーを追跡しません。"
+      },
+      {
+        "title": "2. マイクと音声認識",
+        "text": "WatchPrompter は、ユーザーの許可を得て、リアルタイムのテキスト追従および音声と原稿の照合のためにマイクにアクセスする場合があります。本アプリは Apple の Speech フレームワークを使用します。デバイスとオペレーティングシステムが対応している場合、音声認識はデバイス上で実行されることがあります。デバイスの機能と Apple の音声認識技術によっては、処理に Apple が提供するサービスが使用される場合があります。開発者は、音声録音や音声認識データを独自のサーバーに送信せず、これらの情報を保存しません。"
+      },
+      {
+        "title": "3. カメラと動画",
+        "text": "WatchPrompter は、許可を得て iPhone のカメラとマイクにアクセスする場合があります。撮影した動画はデバイス上で作成され、許可があれば「写真」に保存できます。開発者は、これらの録画・録音を独自のサーバーにアップロードまたは保存しません。"
+      },
+      {
+        "title": "4. Apple Watch",
+        "text": "WatchPrompter は、WatchConnectivity を使用して、iPhone とペアリングされた Apple Watch の間で原稿、設定、アプリの状態を転送する場合があります。これらの内容は、開発者が運営するサーバーに転送または保存されません。"
+      },
+      {
+        "title": "5. AirPods と音声入力ソース",
+        "text": "WatchPrompter は、利用可能な音声入力を特定し、入力ソースを選択できるようにするため、iOS のオーディオルーティング情報にアクセスする場合があります。この情報は音声入力の管理にのみ使用され、開発者が運営するサーバーには送信されません。"
+      },
+      {
+        "title": "6. アプリの設定",
+        "text": "文字サイズ、色、スクロールオプション、音声入力ソースなどの設定は、デバイス上にローカル保存される場合があります。"
+      },
+      {
+        "title": "7. 第三者の広告と分析",
+        "text": "WatchPrompter は、第三者の広告ネットワークや分析 SDK を使用せず、広告用プロフィールを作成せず、他のアプリやウェブサイトを横断してユーザーを追跡しません。"
+      },
+      {
+        "title": "8. データの保持と削除",
+        "text": "開発者は、サーバー側のユーザーアカウントやリモートのユーザーデータ記録を保持していません。ローカルに保存された設定は、設定の変更や本アプリの削除によって管理できます。カメラ、マイク、音声認識、「写真」のアクセス権限は、iOS の「設定」で変更または取り消すことができます。"
+      },
+      {
+        "title": "9. 子どものプライバシー",
+        "text": "WatchPrompter は特に子ども向けに設計されたものではなく、子どもの個人情報を意図的に収集することを目的としていません。"
+      },
+      {
+        "title": "10. 本ポリシーの変更",
+        "text": "本アプリの機能やデータの取り扱い方法が変更された場合、本ポリシーが更新されることがあります。最新版はこのページで公開されます。"
+      }
+    ],
+    "contactTitle": "11. お問い合わせ",
+    "developer": "WatchPrompter 開発者"
+  },
+  "ko": {
+    "documentTitle": "WatchPrompter 개인정보 처리방침",
+    "metaDescription": "WatchPrompter의 개인정보 처리방침",
+    "languageLabel": "언어",
+    "title": "WatchPrompter 개인정보 처리방침",
+    "updated": "최종 업데이트: 2026년 8월 7일",
+    "intro": "WatchPrompter(이하 “앱”)는 iPhone과 Apple Watch에서 텔레프롬프터 기능을 제공하고, 원고를 음성과 동기화하며, iPhone 카메라를 이용한 동영상 녹화를 지원합니다.",
+    "sections": [
+      {
+        "title": "1. 수집하는 데이터",
+        "text": "WatchPrompter는 사용자 데이터를 저장하기 위한 자체 서버, 사용자 계정 시스템 또는 온라인 데이터베이스를 운영하지 않습니다. 개발자는 사용자의 음성 녹음, 동영상, 텔레프롬프터 원고 또는 음성 전사 텍스트를 수집하거나 저장하지 않습니다. 앱은 타사 광고 또는 분석 SDK를 사용하지 않으며 광고 목적으로 사용자를 추적하지 않습니다."
+      },
+      {
+        "title": "2. 마이크 및 음성 인식",
+        "text": "WatchPrompter는 사용자의 허가를 받아 실시간 텍스트 추적 및 음성과 원고의 일치를 확인하기 위해 마이크에 접근할 수 있습니다. 앱은 Apple의 Speech 프레임워크를 사용합니다. 기기와 운영 체제가 지원하는 경우 음성 인식이 기기 내에서 수행될 수 있습니다. 기기의 기능과 Apple의 음성 인식 기술에 따라 처리 과정에서 Apple이 제공하는 서비스를 사용할 수 있습니다. 개발자는 음성 녹음이나 음성 인식 데이터를 자체 서버로 전송하지 않으며 이 정보를 저장하지 않습니다."
+      },
+      {
+        "title": "3. 카메라 및 동영상",
+        "text": "WatchPrompter는 허가를 받아 iPhone의 카메라와 마이크에 접근할 수 있습니다. 녹화한 동영상은 기기 내에서 생성되며 허가를 받으면 사진 앱에 저장할 수 있습니다. 개발자는 이러한 녹화·녹음 내용을 자체 서버에 업로드하거나 저장하지 않습니다."
+      },
+      {
+        "title": "4. Apple Watch",
+        "text": "WatchPrompter는 WatchConnectivity를 사용하여 iPhone과 페어링된 Apple Watch 사이에서 원고, 환경설정 및 앱 상태를 전송할 수 있습니다. 이 콘텐츠는 개발자가 운영하는 서버로 전송되거나 해당 서버에 저장되지 않습니다."
+      },
+      {
+        "title": "5. AirPods 및 오디오 소스",
+        "text": "WatchPrompter는 사용 가능한 오디오 입력을 확인하고 소스를 선택할 수 있도록 iOS 오디오 라우팅 정보에 접근할 수 있습니다. 이 정보는 오디오 입력 관리에만 사용되며 개발자가 운영하는 서버로 전송되지 않습니다."
+      },
+      {
+        "title": "6. 앱 환경설정",
+        "text": "글자 크기, 색상, 스크롤 옵션 및 오디오 소스 환경설정 등의 설정은 기기에 로컬로 저장될 수 있습니다."
+      },
+      {
+        "title": "7. 타사 광고 및 분석",
+        "text": "WatchPrompter는 타사 광고 네트워크나 타사 분석 SDK를 사용하지 않으며 광고 프로필을 생성하거나 다른 앱 또는 웹사이트에 걸쳐 사용자를 추적하지 않습니다."
+      },
+      {
+        "title": "8. 데이터 보관 및 삭제",
+        "text": "개발자는 서버 측 사용자 계정이나 원격 사용자 데이터 기록을 유지하지 않습니다. 로컬에 저장된 환경설정은 설정을 변경하거나 앱을 제거하여 관리할 수 있습니다. 카메라, 마이크, 음성 인식 및 사진 접근 권한은 iOS 설정에서 변경하거나 철회할 수 있습니다."
+      },
+      {
+        "title": "9. 아동의 개인정보",
+        "text": "WatchPrompter는 특별히 아동을 대상으로 설계되지 않았으며, 아동의 개인정보를 의도적으로 수집하고자 하지 않습니다."
+      },
+      {
+        "title": "10. 본 방침의 변경",
+        "text": "앱의 기능이나 데이터 처리 방식이 변경되면 본 방침이 업데이트될 수 있습니다. 최신 버전은 이 페이지에 게시됩니다."
+      }
+    ],
+    "contactTitle": "11. 문의",
+    "developer": "WatchPrompter 개발자"
+  }
+});
+
+  const supportedLanguages = ["en", "tr", "de", "fr", "es", "zh", "ja", "ko"];
+
+  function normalizeLanguage(value) {
+    if (!value) return null;
+    const code = value.toLowerCase().replace(/_/g, "-").split("-")[0];
+    return supportedLanguages.includes(code) ? code : null;
+  }
+
+
 
   const languageSelect = document.getElementById("language-select");
   const content = document.getElementById("content");
@@ -451,8 +621,8 @@
     const params = new URLSearchParams(window.location.search);
     const lang = params.get("lang");
 
-    if (lang && supportedLanguages.includes(lang.toLowerCase())) {
-      return lang.toLowerCase();
+    if (normalizeLanguage(lang)) {
+      return normalizeLanguage(lang);
     }
 
     return null;
@@ -463,8 +633,8 @@
     try {
       const lang = localStorage.getItem("watchprompter-language");
 
-      if (lang && supportedLanguages.includes(lang)) {
-        return lang;
+      if (normalizeLanguage(lang)) {
+        return normalizeLanguage(lang);
       }
     } catch (error) {
       // localStorage may be unavailable.
@@ -483,7 +653,7 @@
     for (const language of browserLanguages) {
       if (!language) continue;
 
-      const code = language.toLowerCase().split("-")[0];
+      const code = normalizeLanguage(language);
 
       if (supportedLanguages.includes(code)) {
         return code;
@@ -507,7 +677,7 @@
   function renderLanguage(lang) {
     const t = translations[lang] || translations.en;
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
     document.title = t.documentTitle;
     metaDescription.setAttribute("content", t.metaDescription);
 
@@ -555,6 +725,9 @@
       // Continue normally if localStorage is unavailable.
     }
 
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState(null, "", url);
     renderLanguage(lang);
   });
 

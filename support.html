@@ -94,6 +94,9 @@
       <option value="de">Deutsch</option>
       <option value="fr">Français</option>
       <option value="es">Español</option>
+      <option value="zh">简体中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
     </select>
   </div>
 
@@ -305,7 +308,90 @@
   };
 
 
-  const supportedLanguages = ["en", "tr", "de", "fr", "es"];
+  Object.assign(translations, {
+  "zh": {
+    "documentTitle": "WatchPrompter 支持",
+    "metaDescription": "适用于 iPhone 和 Apple Watch 的 WatchPrompter 支持",
+    "languageLabel": "语言",
+    "title": "WatchPrompter 支持",
+    "subtitle": "适用于 iPhone 和 Apple Watch 的提词器支持",
+    "contactTitle": "联系支持",
+    "contactText": "如对 WatchPrompter 有疑问、需要报告问题或提供反馈，请联系：",
+    "emailLabel": "电子邮件：",
+    "issuesTitle": "常见问题",
+    "watchTitle": "Apple Watch 连接：",
+    "watchText": "请确保 iPhone 与 Apple Watch 已配对，并且 Apple Watch 上已安装 WatchPrompter。",
+    "speechTitle": "语音跟随无法正常工作：",
+    "speechText": "请在 iPhone 的“设置”中检查是否已为 WatchPrompter 启用麦克风和语音识别权限。",
+    "cameraTitle": "相机或视频录制无法正常工作：",
+    "cameraText": "请确保已启用相机、麦克风和照片权限。",
+    "audioTitle": "未显示 AirPods 或音频来源：",
+    "audioText": "请确保音频设备已连接到 iPhone，然后在“音频来源”部分重新选择合适的输入。",
+    "sendTitle": "无法向 Apple Watch 发送文本：",
+    "sendText": "请确保 iPhone 和 Apple Watch 可以相互通信。必要时，请在两台设备上重新打开 WatchPrompter。",
+    "privacyTitle": "隐私",
+    "privacyText": "阅读 WatchPrompter 隐私政策：",
+    "privacyLink": "隐私政策"
+  },
+  "ja": {
+    "documentTitle": "WatchPrompter サポート",
+    "metaDescription": "iPhone と Apple Watch 向け WatchPrompter のサポート",
+    "languageLabel": "言語",
+    "title": "WatchPrompter サポート",
+    "subtitle": "iPhone と Apple Watch 向けテレプロンプターのサポート",
+    "contactTitle": "サポートへのお問い合わせ",
+    "contactText": "WatchPrompter に関するご質問、不具合の報告、ご意見は、以下までお寄せください。",
+    "emailLabel": "メール：",
+    "issuesTitle": "よくある問題",
+    "watchTitle": "Apple Watch の接続：",
+    "watchText": "iPhone と Apple Watch がペアリングされ、Apple Watch に WatchPrompter がインストールされていることを確認してください。",
+    "speechTitle": "音声追従が機能しない場合：",
+    "speechText": "iPhone の「設定」で、WatchPrompter のマイクと音声認識の権限が有効になっていることを確認してください。",
+    "cameraTitle": "カメラまたは動画撮影が機能しない場合：",
+    "cameraText": "カメラ、マイク、写真へのアクセス権限が有効になっていることを確認してください。",
+    "audioTitle": "AirPods または音声入力ソースが表示されない場合：",
+    "audioText": "オーディオ機器が iPhone に接続されていることを確認し、「音声入力ソース」セクションで適切な入力を選び直してください。",
+    "sendTitle": "Apple Watch にテキストを送信できない場合：",
+    "sendText": "iPhone と Apple Watch が相互に通信できることを確認してください。必要に応じて、両方のデバイスで WatchPrompter を開き直してください。",
+    "privacyTitle": "プライバシー",
+    "privacyText": "WatchPrompter のプライバシーポリシーをご覧ください。",
+    "privacyLink": "プライバシーポリシー"
+  },
+  "ko": {
+    "documentTitle": "WatchPrompter 지원",
+    "metaDescription": "iPhone 및 Apple Watch용 WatchPrompter 지원",
+    "languageLabel": "언어",
+    "title": "WatchPrompter 지원",
+    "subtitle": "iPhone 및 Apple Watch용 텔레프롬프터 지원",
+    "contactTitle": "지원 문의",
+    "contactText": "WatchPrompter에 관한 질문, 오류 신고 또는 의견은 다음 연락처로 보내 주세요.",
+    "emailLabel": "이메일:",
+    "issuesTitle": "자주 발생하는 문제",
+    "watchTitle": "Apple Watch 연결:",
+    "watchText": "iPhone과 Apple Watch가 페어링되어 있고 Apple Watch에 WatchPrompter가 설치되어 있는지 확인하세요.",
+    "speechTitle": "음성 추적이 작동하지 않는 경우:",
+    "speechText": "iPhone의 설정에서 WatchPrompter의 마이크 및 음성 인식 권한이 활성화되어 있는지 확인하세요.",
+    "cameraTitle": "카메라 또는 동영상 녹화가 작동하지 않는 경우:",
+    "cameraText": "카메라, 마이크 및 사진 접근 권한이 활성화되어 있는지 확인하세요.",
+    "audioTitle": "AirPods 또는 오디오 소스가 표시되지 않는 경우:",
+    "audioText": "오디오 기기가 iPhone에 연결되어 있는지 확인한 다음, 오디오 소스 섹션에서 적절한 입력을 다시 선택하세요.",
+    "sendTitle": "Apple Watch로 텍스트를 보낼 수 없는 경우:",
+    "sendText": "iPhone과 Apple Watch가 서로 통신할 수 있는지 확인하세요. 필요한 경우 두 기기에서 WatchPrompter를 다시 여세요.",
+    "privacyTitle": "개인정보 보호",
+    "privacyText": "WatchPrompter 개인정보 처리방침을 확인하세요.",
+    "privacyLink": "개인정보 처리방침"
+  }
+});
+
+  const supportedLanguages = ["en", "tr", "de", "fr", "es", "zh", "ja", "ko"];
+
+  function normalizeLanguage(value) {
+    if (!value) return null;
+    const code = value.toLowerCase().replace(/_/g, "-").split("-")[0];
+    return supportedLanguages.includes(code) ? code : null;
+  }
+
+
 
   const languageSelect = document.getElementById("language-select");
   const content = document.getElementById("content");
@@ -316,8 +402,8 @@
     const params = new URLSearchParams(window.location.search);
     const lang = params.get("lang");
 
-    if (lang && supportedLanguages.includes(lang.toLowerCase())) {
-      return lang.toLowerCase();
+    if (normalizeLanguage(lang)) {
+      return normalizeLanguage(lang);
     }
 
     return null;
@@ -328,8 +414,8 @@
     try {
       const lang = localStorage.getItem("watchprompter-support-language");
 
-      if (lang && supportedLanguages.includes(lang)) {
-        return lang;
+      if (normalizeLanguage(lang)) {
+        return normalizeLanguage(lang);
       }
     } catch (error) {
       // localStorage may be unavailable in some browsing modes.
@@ -348,7 +434,7 @@
     for (const language of browserLanguages) {
       if (!language) continue;
 
-      const code = language.toLowerCase().split("-")[0];
+      const code = normalizeLanguage(language);
 
       if (supportedLanguages.includes(code)) {
         return code;
@@ -372,7 +458,7 @@
   function renderLanguage(lang) {
     const t = translations[lang] || translations.en;
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
     document.title = t.documentTitle;
     metaDescription.setAttribute("content", t.metaDescription);
 
@@ -427,7 +513,7 @@
 
       <p>
         ${t.privacyText}
-        <a href="privacy.html">${t.privacyLink}</a>
+        <a href="privacy.html?lang=${lang}">${t.privacyLink}</a>
       </p>
     `;
   }
@@ -445,6 +531,9 @@
       // Continue normally if localStorage is unavailable.
     }
 
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState(null, "", url);
     renderLanguage(lang);
   });
 
